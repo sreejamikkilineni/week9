@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: regapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: regapp
+  template:
+    metadata:
+      labels:
+        app: regapp
+    spec:
+      containers:
+      - name: regapp
+        image: <your-dockerhub-username>/regapp:latest
+        ports:
+        - containerPort: 5000
