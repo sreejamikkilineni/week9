@@ -30,7 +30,7 @@ pipeline {
 
                 // ✅ Add kubeconfig environment variable
                 bat '''
-                set KUBECONFIG=C:\Users\vr_ma\.kube\config
+                set KUBECONFIG=C:\\Users\\vr_ma\\.kube\\config
                 kubectl cluster-info
                 kubectl apply -f deployment.yaml
                 kubectl apply -f service.yaml
